@@ -11,8 +11,19 @@
                     @csrf
                     @method('PUT')
                     <div class="mb-3">
+                        <label class="form-label">Kode Identitas</label>
+                        <div class="input-group">
+                            <input type="text" name="kd_identitas" id="kd_identitas" class="form-control" value="{{ $karyawan->kd_identitas }}" required>
+                            <button type="button" class="btn btn-sm btn-warning" id="generate-code">Acak</button>
+                        </div>
+                    </div>
+                    <div class="mb-3">
                         <label class="form-label">Nama</label>
                         <input type="text" name="nama" class="form-control" value="{{ $karyawan->nama }}" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Umur</label>
+                        <input type="number" name="umur" class="form-control" value="{{ $karyawan->umur }}" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Jabatan</label>
@@ -35,4 +46,11 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById('generate-code').addEventListener('click', function() {
+            const randomCode = Math.random().toString(36).substring(2, 10).toUpperCase();
+            document.getElementById('kd_identitas').value = randomCode;
+        });
+    </script>
 @endsection

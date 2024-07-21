@@ -22,7 +22,9 @@ class KaryawanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
+            'kd_identitas' => 'required|string|max:112',
             'nama' => 'required|string|max:255',
+            'umur' => 'required|numeric|max:255',
             'jabatan' => 'required|string',
             'alamat' => 'required|string',
             'telepon' => 'required|string|max:15',
@@ -42,7 +44,9 @@ class KaryawanController extends Controller
     public function update(Request $request, Karyawan $karyawan)
     {
         $request->validate([
+            'kd_identitas' => 'required|string|max:112',
             'nama' => 'required|string|max:255',
+            'umur' => 'required|numeric|max:255',
             'jabatan' => 'required|string',
             'alamat' => 'required|string',
             'telepon' => 'required|string|max:15',

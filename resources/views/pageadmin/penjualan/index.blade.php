@@ -16,7 +16,7 @@
                         <tr>
                             <th>Karyawan</th>
                             <th>Tanggal</th>
-                            <th>Jumlah Kilo</th>
+                            <th>Jumlah Kg</th>
                             <th>Harga Jual</th>
                             <th>Total</th>
                             <th>Aksi</th>
@@ -27,9 +27,9 @@
                             <tr>
                                 <td>{{ $penjualan->karyawan->nama }} ({{ $penjualan->karyawan->jabatan }})</td>
                                 <td>{{ $penjualan->tanggal }}</td>
-                                <td>{{ $penjualan->jumlah_kilo }}</td>
-                                <td>{{ $penjualan->hargaJual->harga }}</td>
-                                <td>{{ $penjualan->total }}</td>
+                                <td>{{ $penjualan->jumlah_kilo }} Kg</td>
+                                <td>Rp {{ number_format($penjualan->hargaJual->harga, 0, ',', '.') }}</td>
+                                <td>Rp {{ number_format($penjualan->total, 0, ',', '.') }}</td>
                                 <td>
                                     <a href="{{ route('penjualan.edit', $penjualan->id) }}" class="btn btn-warning btn-sm">Edit</a>
                                     <form action="{{ route('penjualan.destroy', $penjualan->id) }}" method="POST" style="display:inline-block;">

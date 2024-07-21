@@ -14,7 +14,7 @@
                         <select class="form-select" id="karyawan_id" name="karyawan_id" required>
                             <option value="" disabled selected>Pilih Karyawan</option>
                             @foreach($karyawans as $karyawan)
-                                <option value="{{ $karyawan->id }}">{{ $karyawan->nama }}</option>
+                                <option value="{{ $karyawan->id }}">{{ $karyawan->nama }} ({{ $karyawan->jabatan }})</option>
                             @endforeach
                         </select>
                     </div>

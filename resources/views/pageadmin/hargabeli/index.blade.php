@@ -22,7 +22,7 @@
                     <tbody class="table-border-bottom-0">
                         @foreach ($hargaBeli as $hb)
                             <tr>
-                                <td>{{ $hb->harga }}</td>
+                                <td>Rp {{ number_format($hb->harga, 0, ',', '.') }}</td>
                                 <td>{{ $hb->tanggal_berlaku }}</td>
                                 <td>
                                     <a href="{{ route('hargabeli.edit', $hb->id) }}" class="btn btn-warning btn-sm">Edit</a>

@@ -45,7 +45,7 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Detail Pembelian</th> <!-- Ganti dengan kolom yang sesuai -->
+                                <th>JUMLAH KILOGRAM</th> <!-- Ganti dengan kolom yang sesuai -->
                                 <th>Total</th>
                             </tr>
                         </thead>
@@ -53,7 +53,7 @@
                             @foreach($pembelian as $index => $item)
                                 <tr>
                                     <td>{{ $index + 1 }}</td>
-                                    <td>{{ $item->detail }}</td> <!-- Ganti dengan kolom yang sesuai -->
+                                    <td>{{ $item->jumlah_kilo }} Kg</td> <!-- Ganti dengan kolom yang sesuai -->
                                     <td>Rp {{ number_format($item->total, 0, ',', '.') }}</td>
                                 </tr>
                             @endforeach
@@ -78,7 +78,7 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Detail Penjualan</th> <!-- Ganti dengan kolom yang sesuai -->
+                                <th>JUMLAH KILOGRAM</th><!-- Ganti dengan kolom yang sesuai -->
                                 <th>Total</th>
                             </tr>
                         </thead>
@@ -86,7 +86,7 @@
                             @foreach($penjualan as $index => $item)
                                 <tr>
                                     <td>{{ $index + 1 }}</td>
-                                    <td>{{ $item->detail }}</td> <!-- Ganti dengan kolom yang sesuai -->
+                                    <td>{{ $item->jumlah_kilo }} Kg</td> <!-- Ganti dengan kolom yang sesuai -->
                                     <td>Rp {{ number_format($item->total, 0, ',', '.') }}</td>
                                 </tr>
                             @endforeach

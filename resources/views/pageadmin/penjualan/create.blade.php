@@ -23,7 +23,7 @@
                         <input type="date" name="tanggal" class="form-control" required>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Jumlah Kilo</label>
+                        <label class="form-label">Jumlah Kg</label>
                         <input type="number" name="jumlah_kilo" class="form-control" id="jumlah_kilo" required>
                     </div>
                     <div class="mb-3">

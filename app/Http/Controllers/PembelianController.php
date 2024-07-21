@@ -18,7 +18,7 @@ class PembelianController extends Controller
 
     public function create()
     {
-        $karyawans = Karyawan::whereIn('jabatan', ['tukang muat', 'supir'])->get();
+        $karyawans = Karyawan::whereIn('jabatan', ['tukang muat'])->get();
         $hargaBelis = HargaBeli::all();
         return view('pageadmin.pembelian.create', compact('karyawans', 'hargaBelis'));
     }

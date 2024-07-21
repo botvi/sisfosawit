@@ -14,7 +14,9 @@
                 <table id="example" class="display compact nowrap" style="width:100%">
                     <thead>
                         <tr>
+                            <th>Kode Identitas</th>
                             <th>Nama</th>
+                            <th>Umur</th>
                             <th>Jabatan</th>
                             <th>Alamat</th>
                             <th>Telepon</th>
@@ -24,7 +26,9 @@
                     <tbody class="table-border-bottom-0">
                         @foreach($karyawans as $karyawan)
                             <tr>
+                                <td>{{ $karyawan->kd_identitas }}</td>
                                 <td>{{ $karyawan->nama }}</td>
+                                <td>{{ $karyawan->umur }}</td>
                                 <td>{{ $karyawan->jabatan }}</td>
                                 <td>{{ $karyawan->alamat }}</td>
                                 <td>{{ $karyawan->telepon }}</td>

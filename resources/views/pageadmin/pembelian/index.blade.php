@@ -16,7 +16,7 @@
                     <tr>
                         <th>Karyawan</th>
                         <th>Tanggal</th>
-                        <th>Jumlah Kilo</th>
+                        <th>Jumlah Kg</th>
                         <th>Harga Beli</th>
                         <th>Total</th>
                         <th>Aksi</th>
@@ -34,9 +34,9 @@
                                 {{ implode(', ', $karyawanNames) }}
                             </td>
                             <td>{{ $pb->tanggal }}</td>
-                            <td>{{ $pb->jumlah_kilo }}</td>
-                            <td>{{ $pb->hargaBeli->harga }}</td>
-                            <td>{{ $pb->total }}</td>
+                            <td>{{ $pb->jumlah_kilo }} Kg</td>
+                            <td>Rp {{ number_format($pb->hargaBeli->harga, 0, ',', '.') }}</td>
+                            <td>Rp {{ number_format($pb->total, 0, ',', '.') }}</td>
                             <td>
                                 <a href="{{ route('pembelian.edit', $pb->id) }}" class="btn btn-warning btn-sm">Edit</a>
                                 <form action="{{ route('pembelian.destroy', $pb->id) }}" method="POST" style="display:inline-block;">

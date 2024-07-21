@@ -25,7 +25,7 @@
                         <input type="date" name="tanggal" class="form-control" value="{{ $penjualan->tanggal }}" required>
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Jumlah Kilo</label>
+                        <label class="form-label">Jumlah Kg</label>
                         <input type="number" name="jumlah_kilo" class="form-control" id="jumlah_kilo" value="{{ $penjualan->jumlah_kilo }}" required>
                     </div>
                     <div class="mb-3">

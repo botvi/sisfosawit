@@ -23,7 +23,7 @@
                     <tbody class="table-border-bottom-0">
                         @foreach ($hargaJual as $hj)
                             <tr>
-                                <td>{{ $hj->harga }}</td>
+                                <td>Rp {{ number_format($hj->harga, 0, ',', '.') }}</td>
                                 <td>{{ $hj->tanggal_berlaku }}</td>
                                 <td>{{ $hj->pabrik }}</td>
                                 <td>
