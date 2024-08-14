@@ -15,6 +15,7 @@
                     <thead>
                         <tr>
                             <th>Kode Identitas</th>
+                            <th>NIK</th>
                             <th>Nama</th>
                             <th>Umur</th>
                             <th>Jabatan</th>
@@ -27,6 +28,7 @@
                         @foreach($karyawans as $karyawan)
                             <tr>
                                 <td>{{ $karyawan->kd_identitas }}</td>
+                                <td>{{ $karyawan->nik }}</td>
                                 <td>{{ $karyawan->nama }}</td>
                                 <td>{{ $karyawan->umur }}</td>
                                 <td>{{ $karyawan->jabatan }}</td>
