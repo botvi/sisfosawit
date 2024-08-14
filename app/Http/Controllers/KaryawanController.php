@@ -19,11 +19,12 @@ class KaryawanController extends Controller
         return view('pageadmin.karyawan.create');
     }
 
-    public function store(Request $request)
-    {
+  public function store(Request $request)
+{
+    try {
         $request->validate([
             'kd_identitas' => 'required|string|max:112',
-            'nik' => 'required|numeric|max:112|unique:karyawans,nik',
+            'nik' => 'required|numeric|digits_between:1,112|unique:karyawans,nik',
             'nama' => 'required|string|max:255',
             'umur' => 'required|numeric|max:255',
             'jabatan' => 'required|string',
@@ -35,7 +36,17 @@ class KaryawanController extends Controller
         Alert::success('Berhasil', 'Data karyawan berhasil ditambahkan');
 
         return redirect()->route('karyawans.index');
+    } catch (\Illuminate\Validation\ValidationException $e) {
+        $errors = $e->validator->errors();
+        
+        if ($errors->has('nik')) {
+            Alert::error('Error', 'NIK sudah terdaftar. Silakan gunakan NIK lain.');
+        }
+
+        return redirect()->back()->withErrors($errors)->withInput();
     }
+}
+
 
     public function edit(Karyawan $karyawan)
     {
