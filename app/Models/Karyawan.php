@@ -9,7 +9,7 @@ class Karyawan extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['kd_identitas','nama','umur', 'jabatan', 'alamat', 'telepon'];
+    protected $fillable = ['kd_identitas','nik','nama','umur', 'jabatan', 'alamat', 'telepon'];
 
     // Relasi many-to-many dengan Pembelian
     public function pembelians()
