@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('karyawans', function (Blueprint $table) {
             $table->id(); // Primary key
             $table->string('kd_identitas'); // Nama karyawan
+            $table->integer('nik'); // Nama karyawan
             $table->string('nama'); // Nama karyawan
             $table->integer('umur'); // Nama karyawan
             $table->string('jabatan'); // Jabatan karyawan
