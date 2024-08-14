@@ -17,6 +17,10 @@
                             <button type="button" class="btn btn-sm btn-warning" id="generate-code">Acak</button>
                         </div>
                     </div>
+                      <div class="mb-3">
+                        <label class="form-label">NIK</label>
+                        <input type="number" name="nik" class="form-control" value="{{ $karyawan->nik }}" required>
+                    </div>
                     <div class="mb-3">
                         <label class="form-label">Nama</label>
                         <input type="text" name="nama" class="form-control" value="{{ $karyawan->nama }}" required>
