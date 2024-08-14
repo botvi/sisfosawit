@@ -23,7 +23,7 @@ class KaryawanController extends Controller
     {
         $request->validate([
             'kd_identitas' => 'required|string|max:112',
-            'nik' => 'required|string|max:112|unique:kariawans,nik',
+            'nik' => 'required|numeric|max:112|unique:kariawans,nik',
             'nama' => 'required|string|max:255',
             'umur' => 'required|numeric|max:255',
             'jabatan' => 'required|string',
@@ -46,7 +46,7 @@ class KaryawanController extends Controller
     {
         $request->validate([
             'kd_identitas' => 'required|string|max:112',
-            'nik' => 'required|string|max:112|unique:kariawans,nik',
+            'nik' => 'required|numeric|max:112|unique:kariawans,nik',
             'nama' => 'required|string|max:255',
             'umur' => 'required|numeric|max:255',
             'jabatan' => 'required|string',
